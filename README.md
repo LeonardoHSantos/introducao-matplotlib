@@ -105,19 +105,117 @@ Antes de plotar o gráfico, garanta que a importação do <b>matplotlib</b> este
 Quando se fala em plotar um gráfico, claramente estamos querendo visualizar dados e, para isso se faz necessário passar alguns dados como argumentos para as funções do matplotlib.
 
 Quais tipos de dados podemos utilizar?<br>
-É comum plotarmos valores do tipo: <b>int, float, decimal e etc, no geral são valores numéricos</b>.
+É comum plotarmos valores do tipo: <b>int, float, decimal</b> e etc, no geral são valores numéricos.
 
-Para os exemplos a seguir estarei gerando dados aleatórios com o auxílio das funções do numpy.
+Para os exemplos a seguir estarei gerando dados aleatórios com o auxílio das funções da biblioteca numpy.
 
 Neste primeiro exemplo irei criar um gráfico de linha simples, para isso os dados da plotagem estarão armazenados na variável <b>"data"</b>.
 
 Utilize o comando abaixo para gerar um array com números inteiros de 0 a 40 intercalando de 2 em 2:
 
-<b>entrada</b>:<br>data = np.arange(0, 40, 2)
+<br><b>entrada</b>:<br>data = np.arange(0, 40, 2)
 <br>print(<b>data</b>)
-<br>se estiver utilizando jupyter notebook não há necessidade de usar o print, basta apenas chamar o nome da variável para imprimir o valor dela.
-<br>Exemplo: <b>data</b>
-
+    
 <br><b>saída:</b><br>array([ 0,  2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32,
        34, 36, 38])
+ 
+<span align="center">
+    <img src="https://user-images.githubusercontent.com/80490529/222756556-e011f675-87cc-4bd5-bf43-d7e9b3419b06.png" />
+</span>
+  
+<br>Se estiver utilizando <b>jupyter notebook</b> não há necessidade de usar o print, apenas chame o nome da variável para imprimir o valor dela.
+
+# Gerando o primeiro gráfico
+
+Conforme mencionado, para plotarmos um gráfico é necessário passar dados para a função do matplotlib.
+
+Utilizaremos o comando <b>plt.plot</b> e passaremos nossa variável <b>data</b> como argumento da função.
+
+Use o comando abaixo para gerar o gráfico:
+
+<b>plt.plot(data)</b>
+    
+    
+# Exemplo 1 - gráfico de linha simples<br>
+<img src="https://user-images.githubusercontent.com/80490529/222770540-bc92bace-cab2-4dc1-83bd-9362474bfc00.png" />
+    
+Percebam como é simples, criei um array e passei como argumento na função do matplotlib.
+    
+Assim com a função é simples o resultado é relativamente simples, digo, gerou um gráfico simples também que talvez para um caso ou outra sirva, porém, quando estamos explorando dados o ideal é que quanto mais detalhes melhor.
+    
+Dito isso, a biblioteca do matplotlib proporciona outras formas de criar gráficos, vou me aprofundar no conceito de Figuras.
+    
+# Figure & Subplots
+Veja este comando abaixo:<br>
+    <b>fig = plt.figure()
+        
+Se trata de um comando simples que armazenará na variável um objeto do tipo Figure, isto garante maior versatilidade.
+        
+O que quer dizer?
+        
+Quer dizer que agora teremos uma série de opções para configurar nossa figura. Como você deve imaginar a variável <b>fig</b> armazenou o objeto que iremos utilizar no próximo exemplo.
+
+Para criamos um gráfico dentro de uma figura é necessário criar um ou mais <b>subplots</b>.<br>
+A função <b>add_subplot</b> adiciona um subplot dentro da nossa figura, acompanhem:
+
+# Exemplo de subplot
+<br>Comando:
+    <b><br>fig = plt.figure()
+    <b><br>fig.add_subplot(2, 2, 1)
+        
+<br>Saída:
+<span align="center">
+    <img src="https://user-images.githubusercontent.com/80490529/222777887-65caa1fc-b439-4b16-a7bd-f942c9cd377f.png" />
+</span>
+        
+Este comando cria uma subárea de plotagem na proporção 2x2, ou seja, não teremos apenas um, mas sim quatro gráficos dentro de uma figura.
+        
+- 2x2: representa a quantidade de subplotagens dentro de uma figura;
+- 1: representa qual área do subplot iremos utilizar.
+        
+        
+Seguindo essa lógica, podemos criar até 4 subplots dentro da nossa figura:
+<br><br>fig = plt.figure()
+<br>fig.add_subplot(2, 2, 1)
+<br>fig.add_subplot(2, 2, 2)
+<br>fig.add_subplot(2, 2, 3)
+<br>fig.add_subplot(2, 2, 4)
+
+Saída:
+<span align="center">
+    <img src="https://user-images.githubusercontent.com/80490529/222782907-9ecb4f0c-75d8-455b-af21-afee97c95d38.png" />
+</span>
+        
+Obveamente podemos criar uma figura e adicionar mais subplots basta mudarmos as proporções. Neste exemplo irei utilizar a proporção (2, 3, 1):
+        
+<br><br>fig = plt.figure()
+<br>fig.add_subplot(2, 3, 1)
+<br>fig.add_subplot(2, 3, 6)
+ 
+Imaginem uma matriz 2D, é exatamente a mesma lógica, se trata de uma estrutura de dados com duas dimensões.
+        
+Neste exemplo teremos até 6 platagens dentro da mesma figura. Em destaque os subplots 1 e 6:
+        
+Saída:<br>
+<span align="center">
+    <img src="https://user-images.githubusercontent.com/80490529/222784639-806a2a01-1c1e-4fe1-941d-ce86e7cb8960.png" />
+</span>
+
+    
+Seguindo a mesma lógica o comando abaixo criará um área com o preenchimento total de 6 subplots: 
+        <br><br>fig = plt.figure()
+        <br>fig.add_subplot(2, 3, 1)
+        <br>fig.add_subplot(2, 3, 2)
+        <br>fig.add_subplot(2, 3, 3)
+        <br>fig.add_subplot(2, 3, 4)
+        <br>fig.add_subplot(2, 3, 5)
+        <br>fig.add_subplot(2, 3, 6)
+
+Saída:<br>
+<span align="center">
+    <img src="https://user-images.githubusercontent.com/80490529/222785931-c2b76be7-bb9a-4dc8-b0d6-209bae2275f2.png" />
+</span>
+
+        
+
 
