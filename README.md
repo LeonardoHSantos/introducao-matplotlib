@@ -185,15 +185,16 @@ Saída:
 <span align="center">
     <img src="https://user-images.githubusercontent.com/80490529/222782907-9ecb4f0c-75d8-455b-af21-afee97c95d38.png" />
 </span>
-        
-Obveamente podemos criar uma figura e adicionar mais subplots basta mudarmos as proporções. Neste exemplo irei utilizar a proporção (2, 3, 1):
-        
+  
+  
+# Criando uma figura com mais subplots
+Podemos criar mais subplots basta mudarmos as proporções. Neste exemplo irei utilizar a proporção (2, 3, n):
+
 <br><br>fig = plt.figure()
 <br>fig.add_subplot(2, 3, 1)
 <br>fig.add_subplot(2, 3, 6)
  
-Imaginem uma matriz 2D, é exatamente a mesma lógica, se trata de uma estrutura de dados com duas dimensões.
-        
+ 
 Neste exemplo teremos até 6 platagens dentro da mesma figura. Em destaque os subplots 1 e 6:
         
 Saída:<br>
@@ -202,7 +203,7 @@ Saída:<br>
 </span>
 
     
-Seguindo a mesma lógica o comando abaixo criará um área com o preenchimento total de 6 subplots: 
+Seguindo a mesma lógica o comando abaixo criará uma área com preenchimento total de 6 subplots: 
         <br><br>fig = plt.figure()
         <br>fig.add_subplot(2, 3, 1)
         <br>fig.add_subplot(2, 3, 2)
@@ -216,6 +217,82 @@ Saída:<br>
     <img src="https://user-images.githubusercontent.com/80490529/222785931-c2b76be7-bb9a-4dc8-b0d6-209bae2275f2.png" />
 </span>
 
-        
+
+Assim como a variável <b>fig</b> está armazenado a figura, é possível criar cada subplot em uma variável diferente.
+
+<br><br>fig = plt.figure()
+<br>ax_1 = fig.add_subplot(2, 2, 1)
+<br>ax_2 = fig.add_subplot(2, 2, 2)
+<br>ax_3 = fig.add_subplot(2, 2, 3)
+<br>ax_4 = fig.add_subplot(2, 2, 4)
+
+Cada subplot é independente do outro, ou seja, não há uma ordem para utilizarmos eles.
 
 
+# Outras maneiras de criar figuras e subplots
+
+Uma maneira simplificada de realizar o mesmo processo é criarmos um array numpy que armazenará os objetos com subplots.
+
+Veja o exemplo abaixo:
+
+<br>fig, axes = plt.subplots(2, 3)
+
+<span>
+    <img src="https://user-images.githubusercontent.com/80490529/222856072-740cd61a-74b6-479c-80dc-4264c082da31.png"/>
+</span>
+
+Com apenas uma linha a instrução passada armazenará a figura na variável <b>fig</b> e <b>axes</b> armazenará os subplots.
+
+# Ajustando as áreas de plotagem
+
+Observem que algumas configurações são criadas e exibidas automaticamente nos gráficos, percebam que em nenhum momento passamos os valores dos eixos y e x, os espaçamentos entre os subplots também são automáticos, porém podemos ajustar conforme nossas necessidades.
+
+A seguir mostrarei algumas configurações básicas e bastante utéis:
+
+1) nrows - Número de linhas no gráfico.
+2) ncols - Número de colunas no gráfico.
+3) sharex - Um boolean que define se os subplots compartilham o mesmo eixo x.
+4) sharey - Um boolean que define se os subplots compartilham o mesmo eixo y.
+5) subplot_kw - Um dicionário de argumentos adicionais que pode ser passado para a função add_subplot.
+6) gridspec_kw - Um dicionário de argumentos adicionais que pode ser passado para a função GridSpec.
+7) **fig_kw - Um dicionário de argumentos adicionais que pode ser passado para a função criar figura.
+8) layout - Um array de tuplas que especifica a localização de cada subplot no gráfico.
+9) squeeze - Um boolean que define se os subplots devem ser ajustados para caber no
+
+Observem os argumentos <b>sharex</b> e <b>sharey</b>, conforme a descrição mostra, são argumentos do tipo boolean (False/True) que tem como objetivo compartilhar os eixos X e Y dos subplots, acompanhe o exemplo abaixo:
+
+# Compartilhandos apenas eixos X
+<br>fig, axes = plt.subplots(nrows = 2, ncols = 3, sharex = True)
+
+<span>
+    <img src="https://user-images.githubusercontent.com/80490529/222863179-994b1627-1702-4b9b-bff9-ffcaaf534a55.png" />
+</span>
+
+# Compartilhandos apenas eixos Y
+<br>fig, axes = plt.subplots(nrows = 2, ncols = 3, sharey = True)
+
+<span>
+    <img src="https://user-images.githubusercontent.com/80490529/222863275-6d846969-75c7-4059-9d99-78daadd1f42f.png" />
+</span>
+
+
+# Compartilhandos eixos Y e X
+<br>fig, axes = plt.subplots(nrows = 2, ncols = 3, sharex = True, sharey = True)
+
+<span>
+    <img src="https://user-images.githubusercontent.com/80490529/222863460-722d082d-f18e-496d-ab2d-483844db5590.png" />
+</span>
+
+# Ajustando espaçamentos entre os subplots
+<br>fig, axes = plt.subplots(nrows = 2, ncols = 4, sharey=True, sharex=True)
+<br>fig.subplots_adjust(wspace=0, hspace=0)
+
+<span>
+    <img src="https://user-images.githubusercontent.com/80490529/222864117-e7ee11ff-fe36-4d53-9cc6-d114800f1b90.png" />
+</span>
+
+Percebam a nova função chamada "<b>subplots_adjust</b>", ela serve para ajustar os espaçamentos entre os gráficos da figura.
+
+
+# Definição de cores
+...
