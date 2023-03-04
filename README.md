@@ -1,30 +1,48 @@
 # introducao-matplotlib
-Criei este repositório para demonstrar algumas maneiras plotar gráficos com a biblioteca matplotlib.
 
-# O que é e para que serve a biblioteca matplotlib?
+# FINALIDADE
+ A minha finalidade aqui não é convercer ninguém a utilizar essa biblioteca nem rebaixar as ferramentas que já existem no mercado para trabalhar com dados. Tenho como objetivo apresentar alguns recursos da biblioteca matplotlib e mostrar que pode ser uma boa alternativa durante as análises exploratórias.
+ 
+Na minha visão, entendo que um dos fatores principais que podem impedir o desenvolvimento e implementação de melhorias é a falta de conhecimentos, em específico quando não há interesse em conhecer mais, sabendo disso se você tem preguiça de aprender ou pior não quer aprender, talvez esse material não sirva para você. Fiz com o intuito de replicar meus conhecimentos.
+ 
+# INTRODUÇÃO
+Antes de entendermos o que de fato é matplotlib, preciso deixar claro de onde irei obter os dados e qual ferramenta irei utilizar para os exemplos.
 
-Antes de entendermos o que de fato é matplotlib, vamos enterder os métodos mais comuns para trabalharmos com dados utilizando o Python.
+Atualmente quais ferramentas você utiliza para trabalhar com dados? talvez o Pacote Office? Excel e PowerPoint? PowerBI e SQL? Bom, eu já trabalhei com essas e algumas utilizei por tempo suficiente ao ponto de compreender que "para cada necessidade há uma ferramenta apropriada". Afirmo que essas citadas são boas ferramentas sem contar que existem planos gratuitos que servem bem.
 
-Para tratamento, análises e explorações de dados com Python existem uma gama de bibliotecas que podemos utilizar e, dependendo das necessidades algumas bibliotecas podem ser mais adequadas do que outras. Atualmente a biblioteca pandas vem sendo amplamente utilizado na área de dados devido sua versatilizadade e performance. Neste breve exemplo antes de chegar na matplotlib estarei mostrando formas de visualizações de dados com o pandas, temos:
-- display ou print....(para base grande exibe uma fatia dos primeiros e os últimos registros, para base pequena geralmente exibe a base inteira);
-- head....................(por padrão exibe apenas os 5 primeiros registros da base, mas pode ser passado um valor maior como argumento);
-- tail........................(a mesma coisa que o head, a diferença é que exibe os últimos registros);
-- shape...................(exibe a quantidade de linhas e colunas da base);
-- info.......................(exibe informações gerais dos tipos das colunas);
-- ...;
+### Então para que mudar?
 
-Os métodos citados apresentam os dados de forma crua, exibem como vetores e matrizes. Existem maneiras mais interessantes para visualizarmos os dados, digo, algo mais visual para facilitar a análise, obviamente, relembro a escolha de recursos depende das suas necessidades.
+Questão interessante e darei minha visão sobre. Quando estamos trabalhando com dados obviamente precisamos de alguma ferramenta para armazenar e tratar dados, afinal, nem sempre teremos os dados perfeitamente limpos e no formato que precisamos para criar nossas análises e relatórios.
 
-Sabendo disso, podemos contar com algumas bibliotecas gráficas do Python para nos auxiliar durante os processos de análises exploratórias.
+Pois bem, acredito que assim como já ocorreu comigo, pode ter acontecido ou ainda acontecer com vocês, algumas empresas que trabalhei tinham políticas e regras rígidas no quesito dados, um consenso bem comum era que os gestores das áreas definiam quais níveis de acessos, dados e quais ferramentas iriam disponibilizar para cada área, concordo e apoio, mas para quem já teve dificuldades para trabalhar com arquivos de 1GB ou mais entenderá melhor a diferença que faz ter uma ferramenta apropriada e, que para chegar aos relatórios gerenciais umas das maiores dificuldades podem estar no tempo empregado para tratar os dados e o nível de conhecimentos que precisa ter para trabalhar com uma ou mais ferramentas simultaneamente.
 
-<h3>Mas afinal, o quê é matplotlib?</h3>
+Por alguns anos utilizei apenas os recursos do Pacote Office para realizar tarefas corriqueiras das simples as complexas para tratar, análisar, criar dashboards, automatizar rotinas com macros, VBA e etc. Como eu disse e repito, são boas ferramentas e atenderão suas necessidades muito bem, porém, nunca fui de me contentar com o básico, unindo isso ao fato da valirização tanto do Python quanto do profissional de Data Science, decidi me desenvolver com Python e confesso que no início tive um bom desafio, digo, é um pouco desafiador para quem está acomodado com Excel e PowerPoint começar a utilizar novas ferramentas que exigem codificação, entender desde os conceitos mais simples aos mais avançados para estar em um nível profissional.
+
+Ferramentas estão aí para nos ajudar, algumas nos deixam tão acomodados que ficamos no automático, quando comecei a utilizar Python entendi melhor isso pois em alguns casos, especificamente quando era resposável por tratar dados e criar relatórios complexos percebi que a distribuição de dados precisam ser controladas é claro, mas quem distribui e quem define quais dados vão para quais setores da empresa devem estar alinhados entendendo bem as dificuldades para atingir o objetivo final, percebi que o tempo passou e os setores pareciam ter parado no tempo e empregavam apenas o que lhe era conveniente e adequado com as políticas e regras, este desafio não me impediu de buscar conhecimentos e boa parte do que sei aprendi em livros e internet. Nada foi mais satisfatório do que aprender e a cada dia aprender mais sobre essa ferramenta.
+
+
+# ALINHAMENTO
+Os nomes VsCode e PyCharm são bem conhecidos na área de tecnologia, se tratam de IDE's. Mas para me acompanhar e chegar aos mesmos resultados sugiro que utilizem o Jupyter Notebook, além de ser uma ferramenta desenvolvida para trabalhar com dados é amplamente utilizada sem contar que se algo der errado o Jupyter informa o erro e caso você não consiga resolver sozinho poderá contar sempre com a internet, provavelmente alguém já resolveu ou sugeriu algo para solucionar o problema.
+
+# BIBLIOTECAS PYTHON
+
+Se você pesquisar na internet "o que são bibliotecas Python" terá algo assim "As bibliotecas Python são um conjunto de módulos e funções úteis que reduzem o uso de código no programa.". Pode ser que isso cause mais questionamentos do que esclarecimentos. Então "resumindo", quando trabalhamos com desenvolvimento de aplicações independente de qual linguagem estamos programando, há uma série de classes e funções que precisamos desenvolver para entregar pequenas partes de uma aplicação, dito isso, algumas funcionalidades são comuns e podem ser replicadas e escaladas para os projetos, logo, algumas empresas, comunidades, ou até mesmo equipes do projeto podem criar e compartilhar soluções através de pacotes de códigos baseadas nas necessidades comuns e assim otimizar o processo de desenvolvimento dos projetos, sem contar que muitas bibliotecas são desenvolvidas e testadas pelas comunidades e até mesmo utilizadas por grandes empresas de tecnologia, o que torna mais confiável a instalação dos pacotes. Outro detalhe importante, conforme o tempo passsa geralmente são desenvolvidas algumas atualizações dos pacotes com implementações de novas funcionalidades e resolução de bugs, então vale a pena ficar atento e acompanhar o que acontece nas comunidades.
+
+# BIBLIOTECAS AUXILIARES
+
+Para me auxiliar na utilização do matplotlib, irei utilizar as bibliotecas pandas e numpy para gerar e armazenar dados. São amplamente utilizadas para trabalhar com dados devido a versatilizadade e performance.
+
+
+# MAS AFINAL O QUE É E PARA QUE SERVE O MATPLOTLIB?
 
 Vamos lá, <b>matplotlib<b> é um pacote de plotagem para desktop, projetada para criar plotagens com qualidade para publicação (em sua maior parte, bidimensionais). O projeto foi criado por John Hunter em 2002 com o intuito de possibilitar uma interface de plotagem do tipo MATLAB em Python. A biblioteca matplotlib aceita vários backends de GUI em todos os sistemas operacionais e, além disso é capaz de exportar visualizações para todos os vetores comuns e formatos de gráficos raster (PDF, SVG, JPG, PNG, BMP, GIF etc.)
 
+Para seguir com os exemplos irei instalar e importar as bibliotecas necessárias.
 
-Para seguir com os exemplos, utilizarei as bibliotecas <b>matplotlib</b>, <b>numpy</b> e <b>pandas</b>.
+# INSTALAÇÃO DAS BIBLIOTECAS DE ACORDO A IDE
 
-<h3>instalação das bibliotecas:</h3>
+### vs code ou pycharm: PIP
+### JYPYTER NOTEBOOK: ANACONDA PROMPT (anaconda3): CONDA
 
 <table class="table" style="width: 300px; display: table-row-group;">
     <thead>
