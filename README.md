@@ -1,28 +1,37 @@
 # introducao-matplotlib
 
 # FINALIDADE
- A minha finalidade aqui não é convercer ninguém a utilizar essa biblioteca nem rebaixar as ferramentas que já existem no mercado para trabalhar com dados. Tenho como objetivo apresentar alguns recursos da biblioteca matplotlib e mostrar que pode ser uma boa alternativa durante as análises exploratórias.
+Tenho como finalidade apresentar alguns recursos da biblioteca matplotlib e mostrar que pode ser uma boa alternativa durante as análises exploratórias.
  
 Na minha visão, entendo que um dos fatores principais que podem impedir o desenvolvimento e implementação de melhorias é a falta de conhecimentos, em específico quando não há interesse em conhecer mais, sabendo disso se você tem preguiça de aprender ou pior não quer aprender, talvez esse material não sirva para você. Fiz com o intuito de replicar meus conhecimentos.
- 
+
 # INTRODUÇÃO
-Antes de entendermos o que de fato é matplotlib, preciso deixar claro de onde irei obter os dados e qual ferramenta irei utilizar para os exemplos.
+Antes de entendermos o que de fato é matplotlib, preciso esclarecer de onde irei obter os dados e qual ferramenta irei utilizar para os exemplos.
 
 Atualmente quais ferramentas você utiliza para trabalhar com dados? talvez o Pacote Office? Excel e PowerPoint? PowerBI e SQL? Bom, eu já trabalhei com essas e algumas utilizei por tempo suficiente ao ponto de compreender que "para cada necessidade há uma ferramenta apropriada". Afirmo que essas citadas são boas ferramentas sem contar que existem planos gratuitos que servem bem.
 
 ### Então para que mudar?
 
-Questão interessante e darei minha visão sobre. Quando estamos trabalhando com dados obviamente precisamos de alguma ferramenta para armazenar e tratar dados, afinal, nem sempre teremos os dados perfeitamente limpos e no formato que precisamos para criar nossas análises e relatórios.
+Questão interessante e darei minha visão sobre. Apenas quando conhecemos o potencial de cada ferramenta podemos escolher qual utilizar para determinada atividade. Exemplo, por que utilizar matplotlib?
+
+Quando estamos trabalhando com dados obviamente temos que entender quais tipos de dados estamos analisando e quais informações podemos extrair e assim chegar em resultados significantes. Como a própria palavra diz estamos "extraindo informações" e não criando dashboards e KPIs, ou seja, antes de ir para tomada de decisões e criar painés de controle é interessante entender até onde podemos chegar com os dados disponíveis.
+
+Logo se faz necessário escolher alguma ferramenta que armazena, trata dados e nos possibilita criar visualizações, por isso cabe o uso da biblioteca matplolib pois concentra muitos recursos e dois dos principais são:
+
+- platagem de dados (gráficos);
+- possibilidade de utilizar em conjunto com bibliotecas de tratamento de dados tais como pandas e numpy;
+
+Utilizar com essas 2 bibliotecas são de grande ajuda pois nem sempre teremos os dados perfeitamente limpos e no formato que precisamos para criar nossas análises e relatórios.
 
 Pois bem, acredito que assim como já ocorreu comigo, pode ter acontecido ou ainda acontecer com vocês, algumas empresas que trabalhei tinham políticas e regras rígidas no quesito dados, um consenso bem comum era que os gestores das áreas definiam quais níveis de acessos, dados e quais ferramentas iriam disponibilizar para cada área, concordo e apoio, mas para quem já teve dificuldades para trabalhar com arquivos de 1GB ou mais entenderá melhor a diferença que faz ter uma ferramenta apropriada e, que para chegar aos relatórios gerenciais umas das maiores dificuldades podem estar no tempo empregado para tratar os dados e o nível de conhecimentos que precisa ter para trabalhar com uma ou mais ferramentas simultaneamente.
 
-Por alguns anos utilizei apenas os recursos do Pacote Office para realizar tarefas corriqueiras das simples as complexas para tratar, análisar, criar dashboards, automatizar rotinas com macros, VBA e etc. Como eu disse e repito, são boas ferramentas e atenderão suas necessidades muito bem, porém, nunca fui de me contentar com o básico, unindo isso ao fato da valirização tanto do Python quanto do profissional de Data Science, decidi me desenvolver com Python e confesso que no início tive um bom desafio, digo, é um pouco desafiador para quem está acomodado com Excel e PowerPoint começar a utilizar novas ferramentas que exigem codificação, entender desde os conceitos mais simples aos mais avançados para estar em um nível profissional.
+Por alguns anos utilizei apenas os recursos do Pacote Office para realizar tarefas corriqueiras das simples as complexas para tratar, analisar, criar dashboards, automatizar rotinas com macros, VBA e etc. Como eu disse e repito, são boas ferramentas e atenderão suas necessidades muito bem, porém, nunca fui de me contentar com o básico, unindo isso ao fato da valorização tanto do Python quanto do profissional de Data Science, decidi me desenvolver mais com Python e confesso que no início tive um bom desafio, digo, é um pouco desafiador para quem está acomodado com Excel e PowerPoint começar a utilizar novas ferramentas que exigem codificação, entender desde os conceitos mais simples aos mais avançados para estar em um nível profissional.
 
-Ferramentas estão aí para nos ajudar, algumas nos deixam tão acomodados que ficamos no automático, quando comecei a utilizar Python entendi melhor isso pois em alguns casos, especificamente quando era resposável por tratar dados e criar relatórios complexos percebi que a distribuição de dados precisam ser controladas é claro, mas quem distribui e quem define quais dados vão para quais setores da empresa devem estar alinhados entendendo bem as dificuldades para atingir o objetivo final, percebi que o tempo passou e os setores pareciam ter parado no tempo e empregavam apenas o que lhe era conveniente e adequado com as políticas e regras, este desafio não me impediu de buscar conhecimentos e boa parte do que sei aprendi em livros e internet. Nada foi mais satisfatório do que aprender e a cada dia aprender mais sobre essa ferramenta.
+Ferramentas estão aí para nos ajudar, seja algo simples ou complexo sempre teremos que nos aperfeiçoar, logo entendemos que aprender é uma constante e é muito satisfatório aprender algo e conseguir colocar em prática.
 
 
 # ALINHAMENTO
-Os nomes VsCode e PyCharm são bem conhecidos na área de tecnologia, se tratam de IDE's. Mas para me acompanhar e chegar aos mesmos resultados sugiro que utilizem o Jupyter Notebook, além de ser uma ferramenta desenvolvida para trabalhar com dados é amplamente utilizada sem contar que se algo der errado o Jupyter informa o erro e caso você não consiga resolver sozinho poderá contar sempre com a internet, provavelmente alguém já resolveu ou sugeriu algo para solucionar o problema.
+Os nomes VsCode e PyCharm são bem conhecidos na área de tecnologia, se tratam de IDE's. Mas para me acompanhar e chegar aos mesmos resultados sugiro que utilizem o Jupyter Notebook, além de ser uma ferramenta desenvolvida para trabalhar com dados é amplamente utilizada sem contar que se algo der errado o Jupyter informa o erro e caso você não consiga resolver poderá contar com a internet, provavelmente alguém já resolveu ou sugeriu algo para solucionar o problema.
 
 # BIBLIOTECAS PYTHON
 
@@ -35,14 +44,17 @@ Para me auxiliar na utilização do matplotlib, irei utilizar as bibliotecas pan
 
 # MAS AFINAL O QUE É E PARA QUE SERVE O MATPLOTLIB?
 
-Vamos lá, <b>matplotlib<b> é um pacote de plotagem para desktop, projetada para criar plotagens com qualidade para publicação (em sua maior parte, bidimensionais). O projeto foi criado por John Hunter em 2002 com o intuito de possibilitar uma interface de plotagem do tipo MATLAB em Python. A biblioteca matplotlib aceita vários backends de GUI em todos os sistemas operacionais e, além disso é capaz de exportar visualizações para todos os vetores comuns e formatos de gráficos raster (PDF, SVG, JPG, PNG, BMP, GIF etc.)
+Vamos lá, "<b>matplotlib<b> é um pacote de plotagem para desktop, projetada para criar plotagens com qualidade para publicação (em sua maior parte, bidimensionais). O projeto foi criado por John Hunter em 2002 com o intuito de possibilitar uma interface de plotagem do tipo MATLAB em Python. A biblioteca matplotlib aceita vários backends de GUI em todos os sistemas operacionais e, além disso é capaz de exportar visualizações para todos os vetores comuns e formatos de gráficos raster (PDF, SVG, JPG, PNG, BMP, GIF etc.)".
 
-Para seguir com os exemplos irei instalar e importar as bibliotecas necessárias.
+Esta é uma boa descrição que o desenvolvedor de software Wes Mckinney fez no livro "Python para análise de dados".
+
+Nas minhas palavras, matplotlib é um pacote de ferramentas que nos permite criar e configurar gráficos com poucas linhas de código.
 
 # INSTALAÇÃO DAS BIBLIOTECAS DE ACORDO A IDE
+Para seguir com os exemplos irei instalar e importar as bibliotecas necessárias.
 
 ### vs code ou pycharm: PIP
-### JYPYTER NOTEBOOK: ANACONDA PROMPT (anaconda3): CONDA
+### JYPYTER NOTEBOOK - ANACONDA PROMPT (anaconda3): CONDA
 
 <table class="table" style="width: 300px; display: table-row-group;">
     <thead>
@@ -64,7 +76,6 @@ Para seguir com os exemplos irei instalar e importar as bibliotecas necessárias
             <td>pip install pandas</td>
             <td>conda install -c conda-forge pandas</td>
         </tr>
-        <td></td>
     </tbody>
 </table>
 
@@ -80,33 +91,30 @@ O Primeiro passo é configurar a plotagem interativa no jupyter notebook, utiliz
 
 <b>%matplotlib notebook</b>
 
-você pode importar dessa maneira as bibliotecas:
+primeiro exemplo de importação, apenas para demonstrar não utilizem ainda:
 - import numpy
 - import matplotlib
 - import pandas
 
-Porém, as comunidades do Python sugerem uma pequena padronização mais conhecidas como convenções.
+As comunidades do Python sugerem uma padronização mais conhecidas como convenções.
 
-# Convenções das comunidades Python
+### Convenções das comunidades Python
 Algumas configurações rápidas podem ser feitas nos projetos com Python, sejam para nomeclaturas de variáveis e funções ou até mesmo para importações das bibliotecas, por exemplo, suponha que eu nomeasse como "calcular" uma função responsável por calcular x + y, para quem está codificando será fácil entender o que essa função faz, mas conforme o projeto evolui e mais pessoas começam a trabalhar no código você concorda que "calcular" pode ser um nome genérico? portanto haveria a necessidade de deixar este nome mais explícito pois poderá existir mais funções para cálculos e pode gerar confusão. Um dos princípios do Zen do Python é "Explícito é melhor que implícito".
 
 Pois bem, a palavra <b>numpy</b> é relativamente pequena, mas por convenção podemos encurtar mais ainda e padronizar nossos projetos de acordo com as comunidades do Python sugerem e usam.
 
-É sempre recomendável que siga as converções das comunidades independente de qual linguagem seja, pois assim quando outros programadores precisarem realizar manutenções ou simplesmente entender seu código terão facilidade. Portanto, utilize os comandos abaixo para importar as bibliotecas:
-
-- import numpy as np
-- import matplotlib.pyplot as plt
-- import pandas as pd
-
-Perceba a inclusão de <b>"as np</b> e <b>as plt"</b>, como eu disse, é uma forma de encurtar os nomes em Python e também bastante utilizado entre os programadores.
-
-Além disso percebam também a inclusão de <b>".pyplot"</b> depois de matplotlib. Isso é para que possamos utilizar apenas recursos de plotagem pytplot sem a necessidade de importar as demais funções da biblioteca."
-
+É sempre recomendável que siga as converções das comunidades independente de qual linguagem seja, pois assim quando outros programadores precisarem realizar manutenções ou simplesmente entender seu código terão facilidade. Portanto, utilizem os comandos abaixo para importar as bibliotecas:
 
 ## Importação das bibliotecas:
-<p>import numpy as np</p>
-<p>import matplotlib.pyplot as plt</p>
-<p>import pandas as pd</p>
+<pre><code>
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+</pre></code>
+
+Percebam a inclusão de <b>"as np</b> e <b>as plt"</b>, como eu disse, é uma forma de encurtar os nomes em Python e também bastante utilizado entre os programadores.
+
+Além disso percebam também a inclusão de <b>".pyplot"</b> depois de matplotlib. Isso é para que possamos utilizar apenas recursos de plotagem pytplot sem a necessidade de importar as demais funções da biblioteca."
 
 ## Reforçando
 Antes de plotar o gráfico, garanta que a importação do <b>matplotlib</b> esteja como <b>matplotlib.pyplot</b> para que as funções pyplot sejam chamadas na importação. Caso contrário você receberá o erro:
@@ -125,14 +133,17 @@ Quando se fala em plotar um gráfico, claramente estamos querendo visualizar dad
 Quais tipos de dados podemos utilizar?<br>
 É comum plotarmos valores do tipo: <b>int, float, decimal</b> e etc, no geral são valores numéricos.
 
-Para os exemplos a seguir estarei gerando dados aleatórios com o auxílio das funções da biblioteca numpy.
+Para os exemplos a seguir estarei gerando dados aleatórios com o auxílio das funções da biblioteca numpy e pandas.
 
 Neste primeiro exemplo irei criar um gráfico de linha simples, para isso os dados da plotagem estarão armazenados na variável <b>"data"</b>.
 
 Utilize o comando abaixo para gerar um array com números inteiros de 0 a 40 intercalando de 2 em 2:
 
-<br><b>entrada</b>:<br>data = np.arange(0, 40, 2)
-<br>print(<b>data</b>)
+comando:
+<pre><code>
+data = np.arange(0, 40, 2)
+print(data)
+</pre></code>
     
 <br><b>saída:</b><br>array([ 0,  2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32,
        34, 36, 38])
@@ -150,8 +161,9 @@ Conforme mencionado, para plotarmos um gráfico é necessário passar dados para
 Utilizaremos o comando <b>plt.plot</b> e passaremos nossa variável <b>data</b> como argumento da função.
 
 Use o comando abaixo para gerar o gráfico:
-
-<b>plt.plot(data)</b>
+<pre><code>
+plt.plot(data)
+</pre></code>
     
     
 # Exemplo 1 - gráfico de linha simples<br>
@@ -159,13 +171,15 @@ Use o comando abaixo para gerar o gráfico:
     
 Percebam como é simples, criei um array e passei como argumento na função do matplotlib.
     
-Assim com a função é simples o resultado é relativamente simples, digo, gerou um gráfico simples também que talvez para um caso ou outra sirva, porém, quando estamos explorando dados o ideal é que quanto mais detalhes melhor.
+Assim como a função é simples o resultado é relativamente simples, digo, gerou um gráfico simples também que talvez para um caso ou outra sirva, porém, quando estamos explorando dados o ideal é que quanto mais detalhes melhor.
     
 Dito isso, a biblioteca do matplotlib proporciona outras formas de criar gráficos, vou me aprofundar no conceito de Figuras.
     
 # Figure & Subplots
 Veja este comando abaixo:<br>
-    <b>fig = plt.figure()
+<pre><code>
+fig = plt.figure()
+</pre></code>
         
 Se trata de um comando simples que armazenará na variável um objeto do tipo Figure, isto garante maior versatilidade.
         
@@ -178,28 +192,34 @@ A função <b>add_subplot</b> adiciona um subplot dentro da nossa figura, acompa
 
 # Exemplo de subplot
 <br>Comando:
-    <b><br>fig = plt.figure()
-    <b><br>fig.add_subplot(2, 2, 1)
+<b>
+<pre><code>
+fig = plt.figure()
+fig.add_subplot(2, 2, 1)
+</pre></code>
         
-<br>Saída:
+<br>Saída:<br>
 <span align="center">
     <img src="https://user-images.githubusercontent.com/80490529/222777887-65caa1fc-b439-4b16-a7bd-f942c9cd377f.png" />
 </span>
         
 Este comando cria uma subárea de plotagem na proporção 2x2, ou seja, não teremos apenas um, mas sim quatro gráficos dentro de uma figura.
         
-- 2x2: representa a quantidade de subplotagens dentro de uma figura;
-- 1: representa qual área do subplot iremos utilizar.
+- (2, 2, ...) significa 2x2: representa a quantidade de subplotagens dentro de uma figura;
+- (..., ..., 1): representa qual área do subplot iremos utilizar.
         
         
 Seguindo essa lógica, podemos criar até 4 subplots dentro da nossa figura:
-<br><br>fig = plt.figure()
-<br>fig.add_subplot(2, 2, 1)
-<br>fig.add_subplot(2, 2, 2)
-<br>fig.add_subplot(2, 2, 3)
-<br>fig.add_subplot(2, 2, 4)
+<br>
+<pre><code>
+fig = plt.figure()
+fig.add_subplot(2, 2, 1)
+fig.add_subplot(2, 2, 2)
+fig.add_subplot(2, 2, 3)
+fig.add_subplot(2, 2, 4)
+</pre></code>
 
-Saída:
+Saída:<br>
 <span align="center">
     <img src="https://user-images.githubusercontent.com/80490529/222782907-9ecb4f0c-75d8-455b-af21-afee97c95d38.png" />
 </span>
@@ -208,9 +228,12 @@ Saída:
 # Criando uma figura com mais subplots
 Podemos criar mais subplots basta mudarmos as proporções. Neste exemplo irei utilizar a proporção (2, 3, n):
 
-<br><br>fig = plt.figure()
-<br>fig.add_subplot(2, 3, 1)
-<br>fig.add_subplot(2, 3, 6)
+<br>
+<pre><code>
+fig = plt.figure()
+fig.add_subplot(2, 3, 1)
+fig.add_subplot(2, 3, 6)
+</pre></code>
  
  
 Neste exemplo teremos até 6 platagens dentro da mesma figura. Em destaque os subplots 1 e 6:
@@ -222,13 +245,16 @@ Saída:<br>
 
     
 Seguindo a mesma lógica o comando abaixo criará uma área com preenchimento total de 6 subplots: 
-        <br><br>fig = plt.figure()
-        <br>fig.add_subplot(2, 3, 1)
-        <br>fig.add_subplot(2, 3, 2)
-        <br>fig.add_subplot(2, 3, 3)
-        <br>fig.add_subplot(2, 3, 4)
-        <br>fig.add_subplot(2, 3, 5)
-        <br>fig.add_subplot(2, 3, 6)
+<br>
+<pre><code>
+fig = plt.figure()
+fig.add_subplot(2, 3, 1)
+fig.add_subplot(2, 3, 2)
+fig.add_subplot(2, 3, 3)
+fig.add_subplot(2, 3, 4)
+fig.add_subplot(2, 3, 5)
+fig.add_subplot(2, 3, 6)
+</pre></code>
 
 Saída:<br>
 <span align="center">
@@ -238,14 +264,16 @@ Saída:<br>
 
 Assim como a variável <b>fig</b> está armazenado a figura, é possível criar cada subplot em uma variável diferente.
 
-<br><br>fig = plt.figure()
-<br>ax_1 = fig.add_subplot(2, 2, 1)
-<br>ax_2 = fig.add_subplot(2, 2, 2)
-<br>ax_3 = fig.add_subplot(2, 2, 3)
-<br>ax_4 = fig.add_subplot(2, 2, 4)
+<br>
+<pre><code>
+fig = plt.figure()
+ax_1 = fig.add_subplot(2, 2, 1)
+ax_2 = fig.add_subplot(2, 2, 2)
+ax_3 = fig.add_subplot(2, 2, 3)
+ax_4 = fig.add_subplot(2, 2, 4)
+</pre></code>
 
 Cada subplot é independente do outro, ou seja, não há uma ordem para utilizarmos eles.
-
 
 # Outras maneiras de criar figuras e subplots
 
@@ -253,7 +281,10 @@ Uma maneira simplificada de realizar o mesmo processo é criarmos um array numpy
 
 Veja o exemplo abaixo:
 
-<br>fig, axes = plt.subplots(2, 3)
+<br>
+<pre><code>
+fig, axes = plt.subplots(2, 3)
+</pre></code>
 
 <span>
     <img src="https://user-images.githubusercontent.com/80490529/222856072-740cd61a-74b6-479c-80dc-4264c082da31.png"/>
@@ -279,31 +310,43 @@ A seguir mostrarei algumas configurações básicas e bastante utéis:
 
 Observem os argumentos <b>sharex</b> e <b>sharey</b>, conforme a descrição mostra, são argumentos do tipo boolean (False/True) que tem como objetivo compartilhar os eixos X e Y dos subplots, acompanhe o exemplo abaixo:
 
-# Compartilhandos apenas eixos X
-<br>fig, axes = plt.subplots(nrows = 2, ncols = 3, sharex = True)
+# Compartilhando apenas eixos X
+<br>
+<pre><code>
+fig, axes = plt.subplots(nrows = 2, ncols = 3, sharex = True)
+</pre></code>
 
 <span>
     <img src="https://user-images.githubusercontent.com/80490529/222863179-994b1627-1702-4b9b-bff9-ffcaaf534a55.png" />
 </span>
 
-# Compartilhandos apenas eixos Y
-<br>fig, axes = plt.subplots(nrows = 2, ncols = 3, sharey = True)
+# Compartilhando apenas eixos Y
+<br>
+<pre><code>
+fig, axes = plt.subplots(nrows = 2, ncols = 3, sharey = True)
+</pre></code>
 
 <span>
     <img src="https://user-images.githubusercontent.com/80490529/222863275-6d846969-75c7-4059-9d99-78daadd1f42f.png" />
 </span>
 
 
-# Compartilhandos eixos Y e X
-<br>fig, axes = plt.subplots(nrows = 2, ncols = 3, sharex = True, sharey = True)
+# Compartilhando eixos Y e X
+<br>
+<pre><code>
+fig, axes = plt.subplots(nrows = 2, ncols = 3, sharex = True, sharey = True)
+</pre></code>
 
 <span>
     <img src="https://user-images.githubusercontent.com/80490529/222863460-722d082d-f18e-496d-ab2d-483844db5590.png" />
 </span>
 
 # Ajustando espaçamentos entre os subplots
-<br>fig, axes = plt.subplots(nrows = 2, ncols = 4, sharey=True, sharex=True)
-<br>fig.subplots_adjust(wspace=0, hspace=0)
+<br>
+<pre><code>
+fig, axes = plt.subplots(nrows = 2, ncols = 4, sharey=True, sharex=True)
+fig.subplots_adjust(wspace=0, hspace=0)
+</pre></code>
 
 <span>
     <img src="https://user-images.githubusercontent.com/80490529/222864117-e7ee11ff-fe36-4d53-9cc6-d114800f1b90.png" />
@@ -312,5 +355,73 @@ Observem os argumentos <b>sharex</b> e <b>sharey</b>, conforme a descrição mos
 Percebam a nova função chamada "<b>subplots_adjust</b>", ela serve para ajustar os espaçamentos entre os gráficos da figura.
 
 
-# Definição de cores
-...
+# Utilização das bibliotecas pandas e matplotlib
+
+Agora que já fiz a introdução de como funciona o matplotlib vou criar dados fictícios e converter em DataFrame, é muito útil e nos beneficia ainda mais para criar plotagens.
+
+# Criando o Dataframe
+
+Irei utilizar a biblioteca pandas, portanto, garanta que esteja importada. Lembrando da convenção importar assim: "import pandas as pd".
+
+Os dados de exemplo serão da quantidade de vendas e faturamento de 3 filiais no período de 5 semanas.
+
+# gerando a quantidade de vendas por filial - 5 semanas
+<br>comando:
+<pre><code>
+dados_qt_vendas_ult_5_semanas = np.random.randint(500, 1500, size=(3, 5))
+dados_qt_vendas_ult_5_semanas
+</pre></code>
+<br>
+<span>
+ <img src="https://user-images.githubusercontent.com/80490529/222985273-d3fb622e-d100-4085-9ca0-c17725123c28.png"/>
+</span>
+
+# gerando o total faturado por filial - 5 semanas
+<br>comando:
+<pre><code>
+dados_tt_faturamento_ult_5_semanas = np.random.randint(5000, 15000, size=(3, 5))
+dados_tt_faturamento_ult_5_semanas
+</pre></code>
+<br>
+<span>
+ <img src="https://user-images.githubusercontent.com/80490529/222985289-9377d47a-3a08-494a-9840-0ba4dc8c03e8.png"/>
+</span>
+
+<br>Legal, já tenho os dados das vendas para 3 filiais. Agora basta criar o DataFrame e para fazer isso existem inúmeras maneiras, demonstrarei 2 formas e vocês decidem quail usar:
+
+
+# gerando o DataFrame no formato 1:
+<br>comando:
+<pre><code>
+base = {
+    "vendas": dados_qt_vendas_ult_5_semanas.flatten(),
+    "faturamento": dados_tt_faturamento_ult_5_semanas.flatten()
+}
+df = pd.DataFrame(
+    data=base,
+    index=pd.MultiIndex.from_product(
+        [  lista_filiais,  range(1, 6)],
+        names=["filial", "semana"]))
+</pre></code>
+<span>
+ <img src="https://user-images.githubusercontent.com/80490529/222985319-bc580c06-52ee-4a6c-b1fb-c1373842f38a.png"/>
+</span>
+
+# gerando o DataFrame no formato 2:
+<br>comando:
+<pre><code>
+semanas = list(map(lambda x: x,range(1, 6)))
+base = dict()
+for i in range(len(dados_tt_faturamento_ult_5_semanas)):
+   data = list(map(lambda x: dados_tt_faturamento_ult_5_semanas[i][x], range(len(dados_tt_faturamento_ult_5_semanas[i]))))
+   filial = {lista_filiais[i]:data}
+   base.update(filial)
+df_2 = pd.DataFrame(data=base, index=semanas)
+</code></pre>
+
+<span>
+ <img src="https://user-images.githubusercontent.com/80490529/222985353-38c7d0c4-678e-4e3f-8bbf-36a00332260b.png"/>
+</span>
+
+
+
