@@ -373,7 +373,7 @@ dados_qt_vendas_ult_5_semanas
 </pre></code>
 <br>
 <span>
- <img src="https://user-images.githubusercontent.com/80490529/222985273-d3fb622e-d100-4085-9ca0-c17725123c28.png"/>
+ <img src="https://user-images.githubusercontent.com/80490529/223018615-468f34d5-7d5f-43a5-9a77-721ba8770af4.png"/>
 </span>
 
 # gerando o total faturado por filial - 5 semanas
@@ -384,10 +384,10 @@ dados_tt_faturamento_ult_5_semanas
 </pre></code>
 <br>
 <span>
- <img src="https://user-images.githubusercontent.com/80490529/222985289-9377d47a-3a08-494a-9840-0ba4dc8c03e8.png"/>
+ <img src="https://user-images.githubusercontent.com/80490529/223018752-8c514a2d-2341-460d-b236-dc9ea576e21e.png"/>
 </span>
 
-<br>Legal, já tenho os dados das vendas para 3 filiais. Agora basta criar o DataFrame e para fazer isso existem inúmeras maneiras, demonstrarei 2 formas e vocês decidem quail usar:
+<br>Legal, já tenho os dados das vendas para 3 filiais. Agora basta criar o DataFrame e para fazer isso existem inúmeras maneiras, demonstrarei uma forma prática e rápida:
 
 
 # gerando o DataFrame no formato 1:
@@ -400,28 +400,31 @@ base = {
 df = pd.DataFrame(
     data=base,
     index=pd.MultiIndex.from_product(
-        [  lista_filiais,  range(1, 6)],
+        [ lista_filiais,  range(1, 6) ],
         names=["filial", "semana"]))
 </pre></code>
 <span>
- <img src="https://user-images.githubusercontent.com/80490529/222985319-bc580c06-52ee-4a6c-b1fb-c1373842f38a.png"/>
+ <img src="https://user-images.githubusercontent.com/80490529/223018851-7aeb18ea-7aaf-4ffa-9495-6458904255c3.png"/>
 </span>
-
-# gerando o DataFrame no formato 2:
-<br>comando:
+ 
+ 
+# CRIANDO O PRIMEIRO GRÁFICO UTILIZANDO O PANDAS
+ <br>comando:
 <pre><code>
-semanas = list(map(lambda x: x,range(1, 6)))
-base = dict()
-for i in range(len(dados_tt_faturamento_ult_5_semanas)):
-   data = list(map(lambda x: dados_tt_faturamento_ult_5_semanas[i][x], range(len(dados_tt_faturamento_ult_5_semanas[i]))))
-   filial = {lista_filiais[i]:data}
-   base.update(filial)
-df_2 = pd.DataFrame(data=base, index=semanas)
-</code></pre>
+fig, axes = plt.subplots(2, 3, figsize=(18, 12))
+# df["vendas"].loc["Curitiba/PR"].plot(ax=axes[0, 0], legend="Curitiba/PR", color="g", title= 'Vendas - Curitiba/PR')
+df["vendas"].loc["São Paulo/SP"].plot.area(ax=axes[0, 1], legend="São Paulo/SP", color="orange",alpha=1, title= 'Vendas - São Paulo/SP')
+df["vendas"].loc["Porto Alegre/RS"].plot(ax=axes[0, 2], legend="Porto Alegre/RS", color="b", title= 'Vendas - Porto Alegre/RS')
 
-<span>
- <img src="https://user-images.githubusercontent.com/80490529/222985353-38c7d0c4-678e-4e3f-8bbf-36a00332260b.png"/>
+df["faturamento"].loc["Curitiba/PR"].plot.bar(ax=axes[1, 0], legend="Curitiba/PR", color="g", title= 'Faturamento - Curitiba/PR')
+df["faturamento"].loc["São Paulo/SP"].plot.hist(ax=axes[1, 1], legend="São Paulo/SP", color="orange", alpha=0.5, title= 'Faturamento - São Paulo/SP')
+df["faturamento"].loc["Porto Alegre/RS"].plot.pie(ax=axes[1, 2], legend="Porto Alegre/RS", title= 'Faturamento - Porto Alegre/RS')
+</pre></code>
+ 
+ <span>
+ <img src="https://user-images.githubusercontent.com/80490529/223020675-30c0df58-b1f5-4da1-956d-a026eeb9488d.png"/>
 </span>
-
+ 
+Comentei a linha do axes[0, 0] para plotar o gráfico separadamente. Para este axes irei avançar umm pouco mais em relação aos argumentos.
 
 
