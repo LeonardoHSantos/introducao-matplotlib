@@ -477,17 +477,59 @@ Aqui estão alguns parâmetros que podem ser utilizados para definir a posição
     <thead>
         <tr>
             <th>argumentos</th>
+            <th>posição</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>best</td>
-            <td>upper right</td>
+         <td>best</td>
+         <td>melhor</td>
         </tr>
+     
+     <tr>
+         <td>upper right</td>
+         <td>superior direito</td>
+     </tr>
+     
+     <tr>
+         <td>upper left</td>
+         <td>superior esquerdo</td>
+     </tr>
+     
+     <tr>
+         <td>lower left</td>
+         <td>inferior esquerdo</td>
+     </tr>
+     
+     <tr>
+         <td>lower right</td>
+         <td>inferior direito</td>
+     </tr>
+     <tr>
+         <td>right</td>
+         <td>direito</td>
+     </tr>
+     <tr>
+         <td>center left</td>
+         <td>centro esquerdo</td>
+     </tr>
+     <tr>
+         <td>center right</td>
+         <td>centro direito</td>
+     </tr>
+     <tr>
+         <td>lower center</td>
+         <td>inferior centro</td>
+     </tr>
+     <tr>
+         <td>upper center</td>
+         <td>superior centro</td>
+     </tr>
+     <tr>
+         <td>center</td>
+         <td>centro</td>
+     </tr>
+     
+    
     </tbody>
 </table>
- 
-'best', 'upper right', 'upper left', 'lower left', 'lower right', 'right', 'center left', 'center right', 'lower center', 'upper center', 'center'
- 
-
-
