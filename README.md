@@ -469,38 +469,34 @@ fig.subplots_adjust(wspace=0, hspace=0.4)
  
  ### POSICIONAMENTOS - LEGENDA
  
-Observem que configurei a leganda utilizando o argumento "loc" e passei como parâmetro o valor "lower left".
+Observem que configurei a leganda utilizando o parâmentro "loc" e passei como argumento o valor "lower left".
  
-Aqui estão alguns parâmetros que podem ser utilizados para definir a posição da legenda:
+Aqui estão alguns argumentos que podem ser utilizados para definir a posição da legenda:
 
- <table class="table" style="width: 300px; display: table-row-group;">
+<table class="table" style="width: 300px; display: table-row-group;">
     <thead>
         <tr>
             <th>argumentos</th>
-            <th>posição</th>
+            <th>tradução</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
+      <tr>
          <td>best</td>
          <td>melhor</td>
-        </tr>
-     
+      </tr>
      <tr>
          <td>upper right</td>
          <td>superior direito</td>
      </tr>
-     
      <tr>
          <td>upper left</td>
          <td>superior esquerdo</td>
      </tr>
-     
      <tr>
          <td>lower left</td>
          <td>inferior esquerdo</td>
      </tr>
-     
      <tr>
          <td>lower right</td>
          <td>inferior direito</td>
@@ -529,7 +525,11 @@ Aqui estão alguns parâmetros que podem ser utilizados para definir a posição
          <td>center</td>
          <td>centro</td>
      </tr>
-     
-    
     </tbody>
 </table>
+ 
+ 
+<br>
+Além do parâmetro "loc" o parâmetro "rotation" foi utilizado para definir a rotação dos valores do eixo X.
+ 
+ 
