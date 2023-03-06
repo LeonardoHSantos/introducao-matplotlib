@@ -443,6 +443,7 @@ Para o axes[0,0] irei personalizar alguns detalhes do gráfico separadamente, pe
 
 # configuração do título do gráfico
 axes[0, 0].set_title("Quantidade de Vendas Semana - Curitiba/PR", size=18)
+
 # configuração da legenda do gráfico
 # é possível definir a legenda junto com a escolha do axes e personalizar separadamente
 axes[0, 0].legend(fontsize=20, loc='lower left')
@@ -466,6 +467,27 @@ fig.subplots_adjust(wspace=0, hspace=0.4)
  <img src="https://user-images.githubusercontent.com/80490529/223022248-0fb0b244-703e-4b6d-aa92-e30795351163.png" />
 </span>
  
+ ### POSICIONAMENTOS - LEGENDA
+ 
+Observem que configurei a leganda utilizando o argumento "loc" e passei como parâmetro o valor "lower left".
+ 
+Aqui estão alguns parâmetros que podem ser utilizados para definir a posição da legenda:
+
+ <table class="table" style="width: 300px; display: table-row-group;">
+    <thead>
+        <tr>
+            <th>argumentos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>best</td>
+            <td>upper right</td>
+        </tr>
+    </tbody>
+</table>
+ 
+'best', 'upper right', 'upper left', 'lower left', 'lower right', 'right', 'center left', 'center right', 'lower center', 'upper center', 'center'
  
 
 
