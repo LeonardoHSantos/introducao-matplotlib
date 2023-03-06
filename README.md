@@ -373,7 +373,7 @@ dados_qt_vendas_ult_5_semanas
 </pre></code>
 <br>
 <span>
- <img src="https://user-images.githubusercontent.com/80490529/223018615-468f34d5-7d5f-43a5-9a77-721ba8770af4.png"/>
+ <img src="https://user-images.githubusercontent.com/80490529/223018615-468f34d5-7d5f-43a5-9a77-721ba8770af4.png" />
 </span>
 
 # gerando o total faturado por filial - 5 semanas
@@ -384,7 +384,7 @@ dados_tt_faturamento_ult_5_semanas
 </pre></code>
 <br>
 <span>
- <img src="https://user-images.githubusercontent.com/80490529/223018752-8c514a2d-2341-460d-b236-dc9ea576e21e.png"/>
+ <img src="https://user-images.githubusercontent.com/80490529/223018752-8c514a2d-2341-460d-b236-dc9ea576e21e.png" />
 </span>
 
 <br>Legal, já tenho os dados das vendas para 3 filiais. Agora basta criar o DataFrame e para fazer isso existem inúmeras maneiras, demonstrarei uma forma prática e rápida:
@@ -404,7 +404,7 @@ df = pd.DataFrame(
         names=["filial", "semana"]))
 </pre></code>
 <span>
- <img src="https://user-images.githubusercontent.com/80490529/223018851-7aeb18ea-7aaf-4ffa-9495-6458904255c3.png"/>
+ <img src="https://user-images.githubusercontent.com/80490529/223018851-7aeb18ea-7aaf-4ffa-9495-6458904255c3.png" />
 </span>
  
  
@@ -422,9 +422,50 @@ df["faturamento"].loc["Porto Alegre/RS"].plot.pie(ax=axes[1, 2], legend="Porto A
 </pre></code>
  
  <span>
- <img src="https://user-images.githubusercontent.com/80490529/223020675-30c0df58-b1f5-4da1-956d-a026eeb9488d.png"/>
+ <img src="https://user-images.githubusercontent.com/80490529/223020675-30c0df58-b1f5-4da1-956d-a026eeb9488d.png" />
 </span>
  
-Comentei a linha do axes[0, 0] para plotar o gráfico separadamente. Para este axes irei avançar umm pouco mais em relação aos argumentos.
+Comentei a linha do axes[0, 0] para plotar o gráfico separadamente. Para este axes irei avançar um pouco mais na personalização passando alguns argumentos separados.
+ 
+# PERSONALIZAÇÃO EXCLUSIVA DE AXES
+ 
+Para o axes[0,0] irei personalizar alguns detalhes do gráfico separadamente, percebam que quantidade de instruções aumentam assim como o nível de detalhes no gráfico.
+ 
+ <pre><code>
+ df["vendas"].loc["Curitiba/PR"].plot(
+    ax=axes[0, 0],
+    label='Curitiba/PR',
+    fontsize=14,
+    alpha=1, color="#0000CD",
+    linestyle='-',
+    marker='o',
+    markersize=4)
+
+# configuração do título do gráfico
+axes[0, 0].set_title("Quantidade de Vendas Semana - Curitiba/PR", size=18)
+# configuração da legenda do gráfico
+# é possível definir a legenda junto com a escolha do axes e personalizar separadamente
+axes[0, 0].legend(fontsize=20, loc='lower left')
+
+# definição de novos valores para o eixo X
+labels_x = ["1", "A", "2", "2.5", "D", "3.5", "plot", "4.5", "5", "cinco", 6]
+axes[0, 0].set_xticklabels(
+    labels_x,
+    size=14,
+    rotation=45
+);
+
+# configuração dos títulos dos eixos Y e X
+axes[0, 0].set_ylabel('Vendas - Curitiba/PR', fontsize=25)
+axes[0, 0].set_xlabel('Curitiba/PR', size=16, color="#0000CD");
+
+fig.subplots_adjust(wspace=0, hspace=0.4)
+</pre></code>
+ 
+<span>
+ <img src="https://user-images.githubusercontent.com/80490529/223021120-174088e4-ba22-441a-9dd1-f3134fe99ad6.png" />
+</span>
+ 
+ 
 
 
