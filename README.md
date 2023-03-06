@@ -529,7 +529,10 @@ Aqui estão alguns argumentos que podem ser utilizados para definir a posição 
 </table>
  
  
-<br>
-Além do parâmetro "loc" o parâmetro "rotation" foi utilizado para definir a rotação dos valores do eixo X.
+### POSICIONAMENTOS - VALORES EIXO X
+Se repararem nos eixos dos demais gráficos irão perceber que os valores são ajustados automaticamente. Mas foi possível ajustar os valores com a intrução "axes[0, 0].set_xticklabels(...) com o auxilio da variável "labels_x" que armazenou os valores personalizados que passei manualmente.
+ 
+Passei 2 parâmetros "size" e "rotation" e já foi suficiente para percebemos a mudança no eixo comparado aos demais gráficos. Claro, passei valores totalmente desproporcionais ao que está sendo observado, isto foi proposital para que percebam a liberdarde que temos em utilizar o matplolib.
+
  
  
